@@ -14,7 +14,7 @@ function draw() {
   for (var i = 0; i < width / w; i++) {
     for (var j = 0; j < height / h; j++) {
       if (sin(frameCount / 50 + i * j) > 0.5) {
-        fill(255);
+        fill(0, 0, 255);
       } else {
         fill(0);
       }
