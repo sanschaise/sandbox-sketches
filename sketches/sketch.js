@@ -2,6 +2,7 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  frameRate(15);
   // Put setup code here
 }
 
