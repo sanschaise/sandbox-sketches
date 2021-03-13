@@ -7,12 +7,19 @@ function setup() {
 
 function draw() {
   // Put drawings here
-  fill(234, 31, 81);
-  noStroke();
-  rect(50, 50, 250, 250);
-  fill(255);
-  textStyle(BOLD);
-  textSize(140);
+  w = 15;
+  h = 15;
+
+  for (var i = 0; i < width / w; i++) {
+    for (var j = 0; j < height / h; j++) {
+      if (sin(frameCount / 50 + i * j) > 0.5) {
+        fill(255);
+      } else {
+        fill(0);
+      }
+      rect(i * w, j * h, w, h);
+    }
+  }
 }
 
 // This Redraws the Canvas when resized
