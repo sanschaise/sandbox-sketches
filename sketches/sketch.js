@@ -8,7 +8,7 @@ function setup() {
 
 let time = 0;
 function draw() {
-  time += 0.01 + time * 0.01;
+  time += 0.01 + time * 0.001;
   background("#FFF");
   // Put drawings here
   push();
