@@ -2,25 +2,23 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(15);
+  frameRate(30);
   // Put setup code here
 }
 
+let time = 0;
 function draw() {
+  time += 0.01 + time * 0.01;
+  background("#FFF");
   // Put drawings here
-  w = 15;
-  h = 15;
+  push();
 
-  for (var i = 0; i < width / w; i++) {
-    for (var j = 0; j < height / h; j++) {
-      if (sin(frameCount / 50 + i * j) > 0.5) {
-        fill(0, 0, 255);
-      } else {
-        fill(0);
-      }
-      rect(i * w, j * h, w, h);
-    }
-  }
+  translate(width / 2, height / 2);
+  rotate(time);
+  fill(0);
+  ellipse(width / 3, 0, width / 6, width / 6);
+
+  pop();
 }
 
 // This Redraws the Canvas when resized
